@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guia perguntas</title>
+    <!--Estou apotando onde si encontra o arquivo style.css-->
+    <link rel="stylesheet" href="/css/style.css"> 
+    
+</head>
+<body>
+<h1>Guia Perguntas!</h1>
+<hr>
+<h3>Lista de Perguntas</h3>
+
+<!-- Irá exibir as variaveis do index.js -->
+
+<p>Nome: <%= nome %></p>
+<p>Liguagem: <%= lang %></p>
+<p>Empresa: <%= empresa %></p>
+<p>Inscritos no canal: <%= inscritos %></p>
+
+<!-- Exibir condicao-->
+<% if(msg == false ) { %>
+<h1>Lista de Compras !!!</h1> 
+<%}
+ else{ %>
+    <h3>Nenhum Erro</h3>
+    <%} %>
+   
+<!-- Irá exibir o Array produtos -->
+
+<!-- Para percorer o Array será necessario utilizar o forEach-->
+
+<% produtos.forEach(function(produto) { %> 
+
+    <hr>
+    <h3><%= produto.nome %></h3>
+    <h4><%= produto.preco %></h4> 
+
+<% }) %>
+
+<!-- Carregando Imagem no Navegador-->
+<img src="/img/node_.jpeg">
+    
+</body>
+</html>
+
+
+

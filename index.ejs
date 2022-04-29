@@ -1,0 +1,34 @@
+<%- include ("partials/header.ejs") %>
+  <body>
+    <%- include ("partials/navbar.ejs") %>
+
+    <div class="container"> <!--Listando Titulo do Banco de dados-->
+    <hr>
+    <h3> Perguntar </h3>
+    </hr>
+    <a href="/perguntar" class="btn btn-primary"> Perguntar</a>
+    <hr>
+    
+      <% perguntas.forEach(pergunta => { %> 
+        <!-- Listando Randomicamente as respostas ao clicar no <button> </button>  utilizando <%= %> e <a> </a> -->
+        <div class="card"> 
+          <div class="card-body">
+            <h3><p class="titulo"> <%= pergunta.titulo %></h3>
+              
+          </div>
+          
+          <div class="card-footer" >
+           
+            <a href="/pergunta/<%= pergunta.id %>"><button class="btn btn-primary"> Responder </button></a>
+          </div>
+          
+        </div>
+        <br>
+    <% }) %>
+ 
+    </div>
+       
+   </body>
+  <%- include ("partials/fooder.ejs") %>
+
+
